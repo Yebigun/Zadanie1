@@ -55,7 +55,6 @@ jobs:
           username: ${{ github.GH_USERNAME }}
           password: ${{ secrets.GH_TOKEN }}
  
-
       #Zbudowanie i wypchniecie obrazu na Dockerhuba
       - name: Build and push
         id: docker_build
