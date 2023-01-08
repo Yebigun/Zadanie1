@@ -56,7 +56,7 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
           platforms: linux/arm/v7,linux/arm64/v8,linux/amd64 
           context: ./
-          file: ./dockerfile.v1
+          file: ./Dockerfile
           push: true
           tags: |
             yebigun/fib:fibo
