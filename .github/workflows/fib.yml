@@ -13,14 +13,14 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Docker meta
-      id: meta
-      uses: docker/metadata-action@v4
-      with:
-        images: |
-          yebigun/FibCalc
-          ghcr.io/yebigun/FibCalc
-        tags: |
-          type=semver.pattern={{version}}  
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: |
+            yebigun/FibCalc
+            ghcr.io/yebigun/FibCalc
+          tags: |
+            type=semver.pattern={{version}}  
 
       #Skonfigurowanie dockera + buildx
       - name: Buildx set-up
