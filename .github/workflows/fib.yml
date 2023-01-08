@@ -69,8 +69,3 @@ jobs:
           tags: ${{steps.meta.outputs.tags }}
           labels: ${{steps.meta.outputs.labels }}
       
-      #Przenies cache'a
-      - name: Move cache
-        run: |
-          rm -rf /tmp/.buildx-cache
-          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
