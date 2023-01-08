@@ -20,7 +20,7 @@ jobs:
             yebigun/FibCalc
             ghcr.io/yebigun/FibCalc
           tags: |
-            type=semver.pattern={{version}}  
+            type=semver,pattern={{version}}  
 
       #Skonfigurowanie dockera + buildx
       - name: Buildx set-up
