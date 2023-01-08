@@ -1,8 +1,9 @@
 name: CI
 on:
-  push:
-    branches: [ main ]
-
+workflow dispatch:
+push :
+  tags:
+    - v1.**
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -10,10 +11,20 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Docker meta
+      id: meta
+      uses: docker/metadata-action@v4
+      with:
+        images: |
+          yebigun/FibCalc
+          ghcr.io/yebigun/FibCalc
+        tags: |
+          type=semver.pattern={{version}}  
+
       #Skonfigurowanie dockera + buildx
       - name: Buildx set-up
         id: buildx
-        uses: docker/setup-buildx-action@v
+        uses: docker/setup-buildx-action@master
         
       #Instalacja QEMU
       - name: Docker Setup QEMU
