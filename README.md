@@ -13,3 +13,5 @@ git tag -a "v0.0.0"
 a następnie pushowano poleceniem:
 
 git push --follow-tags
+
+By Grzegorz Zaręba [1.5 Piątek 14:00]
