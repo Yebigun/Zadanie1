@@ -1,6 +1,6 @@
 name: CI
 on:
-  workflow dispatch:
+  workflow_dispatch:
   push :
     tags:
       - v1.**
